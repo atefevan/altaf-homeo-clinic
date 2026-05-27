@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-bengali: "Hind Siliguri", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+
+html, body {
+  font-family: var(--font-sans);
+  background-color: #f4f7f9; 
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #native-print-sheet, #native-print-sheet *, 
+  #native-a3-print-layout, #native-a3-print-layout * {
+    visibility: visible !important;
+  }
+  #native-print-sheet, #native-a3-print-layout {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 8.5in !important;
+    height: 11in !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: white !important;
+    z-index: 99999 !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  @page {
+    size: Letter portrait;
+    margin: 0;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

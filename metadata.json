@@ -1,0 +1,6 @@
+{
+  "name": "AltafShifakhana",
+  "description": "Clinic + Pharmacy Management System with Patient visit history, OPD consultation, Prescription engine, Inventory tracking, Billing, and AI assist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
